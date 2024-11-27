@@ -1,0 +1,11 @@
+GET http://localhost:3333/
+
+###
+POST http://localhost:3333/add
+
+###
+PUT http://localhost:3333/update
+
+###
+
+DELETE http://localhost:3333/delete
