@@ -2,9 +2,19 @@ GET http://localhost:3333/
 
 ###
 POST http://localhost:3333/add
+Content-Type: application/json
+
+{
+    "name" : "reguar plantas!!"
+}
 
 ###
 PUT http://localhost:3333/update
+Content-Type: application/json
+
+{
+    "name" : "remover lixo"
+}
 
 ###
 
