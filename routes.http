@@ -9,7 +9,8 @@ Content-Type: application/json
 }
 
 ###
-PUT http://localhost:3333/update
+
+PUT http://localhost:3333/update/e55d01e7-9c54-490d-9620-59fea53632bb
 Content-Type: application/json
 
 {
@@ -18,4 +19,4 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3333/delete
+DELETE http://localhost:3333/delete/fff28c4f-15e3-4289-af0c-ee7face387d3

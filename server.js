@@ -5,8 +5,8 @@ const server = fastify()
 const database = new DatabasePostgres
 
 server.get('/', (request, reply) =>{
-    console.log("video")
-   return reply.status(201).send()
+     const tasks = database.list()
+    return tasks
 })
 server.post('/add', (request, reply)=>{
     const {name} = request.body
@@ -16,15 +16,19 @@ server.post('/add', (request, reply)=>{
         
     return reply.status(201).send()
 })
-server.put('/update', (request, reply)=>{
+server.put('/update/:id', (request, reply)=>{
+    const IDtask = request.params.id  
+
     const {name} = request.body
-    database.update({
+
+    database.update(IDtask,{
         name : name
     })
     return reply.status(204).send()
 })
-server.delete('/delete',(request, reply)=>{
-    console.log('bora deletar');
+server.delete('/delete/:id',(request, reply)=>{
+    const IDtask = request.params.id
+    database.delete(IDtask)
     return reply.status(201).send()
 })
 server.listen({
